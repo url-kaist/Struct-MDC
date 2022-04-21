@@ -1,0 +1,3 @@
+[submodule "UV-SLAM"]
+	path = UV-SLAM
+	url = https://github.com/zinuok/UV-SLAM.git
