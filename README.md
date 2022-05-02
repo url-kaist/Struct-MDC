@@ -18,7 +18,7 @@
 - Depth completion from Visual(-inertial) SLAM using point & line features.
 
 #### README & code & Dataset are still being edited.  
-- Code (including source code, utility code for visualization) & Dataset will be finalized & released soon! **<span style="color:red">(goal: 2022/04/29)</span>**
+- Code (including source code, utility code for visualization) & Dataset will be finalized & released soon! **<span style="color:red"> (goal: I'm still organizing the code structure, until publish date)</span>**
 - version info
   - (04/20) docker image has been uploaded.
   - (04/21) Dataset has been uploaded.
