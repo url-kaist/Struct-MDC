@@ -13,16 +13,16 @@
 *(click the above buttons for redirection!)*
 
 ***
-#### Official page of "Struct-MDC: Mesh-Refined Unsupervised Depth Completion Leveraging Structural Regularities from Visual SLAM", which is accepted in IEEE RA-L'22 (IROS'22 are still being under-reviewed.)
-
+#### Official page of "Struct-MDC: Mesh-Refined Unsupervised Depth Completion Leveraging Structural Regularities from Visual SLAM", which is accepted in IEEE RA-L'22 & IROS'22
 - Depth completion from Visual(-inertial) SLAM using point & line features.
 
-#### README & code & Dataset are still being edited.  
+#### Code & Dataset verion info.  
 - Code (including source code, utility code for visualization) & Dataset will be finalized & released soon! 
 - version info
   - (04/20) docker image has been uploaded.
   - (04/21) Dataset has been uploaded.
   - (04/21) Visusal-SLAM module (modified [UV-SLAM](https://github.com/url-kaist/UV-SLAM)) has been uploaded.
+  - (11/01) data generation tools has been uploaded.
 ***
 
 <br><br>
@@ -159,18 +159,19 @@ For more details on each dataset we used, please refer our [paper](https)
 
 <br><br>
 ## Running Struct-MDC
+
 Using our pre-trained network, you can simply run our network and verify the performance as same as our paper.
 ```bash
 # move the pre-trained weights to the following folder:
-cd Struct-MDC/structMDC_src/
-mv $(PATH_TO_PRETRAINED_WEIGHTS)  ./pretrained/plad/struct_MDC_model/
+cd Struct-MDC/Struct-MDC_src/
+mv $(PATH_TO_PRETRAINED_WEIGHTS)  ./pretrained/{plad | nyu | void}/struct_MDC_model/
 
 # link dataset
-tar -xvzf PLAD_v2.tar.xz # (VOID: void_parsed_line.tar.xz \ NYUV2: nyu_v2_line.tar.xz)
+tar -xvzf {PLAD: PLAD_v2 | VOID: void_parsed_line | NYUV2: nyu_v2_line}.tar.xz
 ln -s $(PATH_TO_DATASET_FOLDER) ./data/
 
 # running
-bash bash/run_structMDC_plad_pretrain.sh
+bash bash/run_structMDC_{plad | nyu | void}_pretrain.sh
 ```
 
 - **Evaluation results**
@@ -190,20 +191,13 @@ bash bash/run_structMDC_plad_pretrain.sh
 You can also train the network from the beginning using your own data. <br>
 However, in this case, you have to prepare the data as same as ours, from following procedure: <br>
 
-*(Since our data structure, dataloader, and pre-processing code templetes follows our baseline: [KBNet](https://github.com/alexklwong/calibrated-backprojection-network), you can also refer the author's link. Really appreciate for the KBNet's authors.)*
+*(Since our data structure, dataloader, and pre-processing code templetes follows our baseline: [KBNet](https://github.com/alexklwong/calibrated-backprojection-network), you can also refer the author's link. We thanks the KBNet's authors.)*
 
 <br><br>
 ## Prepare Your own Dataset
-- *Only if you want to make your own dataset from UV-SLAM depth estimation*, follow [Post-process your own Dataset]().
+- *Only if you want to make your own dataset from UV-SLAM depth estimation*, follow [Post-process your own Dataset](https://github.com/url-kaist/Struct-MDC/tree/main/data_generation#readme).
 
-  
-  
 
-<br><br>
-### Training
-```bash
-bash bash/train_kbnet.sh
-```
 
 
 
