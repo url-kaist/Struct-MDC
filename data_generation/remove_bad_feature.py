@@ -1,12 +1,30 @@
+######################################
+#        Data generation tool        #
+######################################
+
+# AUTHOR LICENSE INFO.
+######################################
+'''
+Author: Jinwoo Jeon <zinuok@kaist.ac.kr>
+If you use this code, please cite the following paper:
+J. Jeon, H. Lim, D. Seo, H. Myung. "Struct-MDC: Mesh-Refined Unsupervised Depth Completion Leveraging Structural Regularities from Visual SLAM"
+'''
+
+# DESCRIPTIONS
+######################################
+'''
+- remove items if number of detected features are less then < threshold, 
+- or there doesn't exist mesh.
+'''
+
+
+
+
 import imageio
 import argparse
 import numpy as np
 import os 
 
-#####################################################################
-# remove items if number of detected features are less then < threshold, 
-# or there doesn't exist mesh
-#####################################################################
 
 
 

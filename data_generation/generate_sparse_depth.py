@@ -1,5 +1,26 @@
 #!/usr/bin/env python3
 #-*- encoding: utf-8 -*-
+######################################
+#        Data generation tool        #
+######################################
+
+# AUTHOR LICENSE INFO.
+######################################
+'''
+Author: Jinwoo Jeon <zinuok@kaist.ac.kr>
+If you use this code, please cite the following paper:
+J. Jeon, H. Lim, D. Seo, H. Myung. "Struct-MDC: Mesh-Refined Unsupervised Depth Completion Leveraging Structural Regularities from Visual SLAM"
+'''
+
+# DESCRIPTIONS
+######################################
+'''
+- Through CDT, linearly interpolated mesh depth is generated,
+  from sparse point & line feature from UV-SLAM.
+'''
+
+
+
 
 
 

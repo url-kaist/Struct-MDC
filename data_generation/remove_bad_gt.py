@@ -1,12 +1,18 @@
-import os
-import argparse
-import sys
-from typing import DefaultDict
+######################################
+#        Data generation tool        #
+######################################
 
+# AUTHOR LICENSE INFO.
+######################################
+'''
+Author: Jinwoo Jeon <zinuok@kaist.ac.kr>
+If you use this code, please cite the following paper:
+J. Jeon, H. Lim, D. Seo, H. Myung. "Struct-MDC: Mesh-Refined Unsupervised Depth Completion Leveraging Structural Regularities from Visual SLAM"
+'''
 
-
-
-#####################################################################
+# DESCRIPTIONS
+######################################
+'''
 # remove the interval you specified. It is used for cut-off 
 # Based on the frame index [i] you defined, 
 # i)  mode 1 : cut_start = True (all previous frames)
@@ -16,7 +22,19 @@ from typing import DefaultDict
 #       remove [i] ~ [end]
 #
 # This allows you to split a sequence into two sequences.
-#####################################################################
+'''
+
+
+
+
+
+import os
+import argparse
+import sys
+from typing import DefaultDict
+
+
+
 
 
 
