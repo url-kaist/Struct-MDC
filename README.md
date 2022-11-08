@@ -193,6 +193,17 @@ However, in this case, you have to prepare the data as same as ours, from follow
 
 *(Since our data structure, dataloader, and pre-processing code templetes follows our baseline: [KBNet](https://github.com/alexklwong/calibrated-backprojection-network), you can also refer the author's link. We thanks the KBNet's authors.)*
 
+```bash
+# data preparation
+cd Struct-MDC_src
+mkdir data
+ln -s $(PATH_TO_{NYU | VOID | PLAD}_DATASET_ROOT) data/
+python3 setup/setup_dataset_{nyu | void | plad}.py
+
+# train
+bash bash/train_{nyu | void | plad}.sh
+```
+
 <br><br>
 ## Prepare Your own Dataset
 - *Only if you want to make your own dataset from UV-SLAM depth estimation*, follow [Post-process your own Dataset](https://github.com/url-kaist/Struct-MDC/tree/main/data_generation#readme).
