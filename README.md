@@ -66,10 +66,11 @@
 
 ## Installation
 ### 1. Prerequisites (we've validated our code in the following environment!)
+**<span style="color:red"> (You can skip the Visual-SLAM module part, if you just want to use NYUv2, VOID, and PLAD datsets)</span>**
 - **Common**
   -  Ubuntu 18.04
-  - [ROS melodic](http://wiki.ros.org/ROS/Installation)
 - **Visual-SLAM module**
+  - [ROS melodic](http://wiki.ros.org/ROS/Installation)
   - OpenCV 3.2.0 (under 3.4.1)
   - [Ceres Solver-1.14.0](https://github.com/zinuok/VINS-Fusion#-ceres-solver-1)
   - [Eigen-3.3.9](https://github.com/zinuok/VINS-Fusion#-eigen-1)
