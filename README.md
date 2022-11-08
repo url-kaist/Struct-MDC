@@ -144,9 +144,9 @@ For more details on each dataset we used, please refer our [paper](https)
   
 | Dataset | ref. link | train/eval data | ROS bag | DepthNet weight | PoseNet weight |
 |:-------:|:-------:|:-------:|:--------------:|:--------------:|:--------------:|
-|   VOID  | [original](https://github.com/alexklwong/void-dataset) |     [void-download](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/VOID/void_parsed_line.tar.xz) | [void-raw](https://github.com/alexklwong/void-dataset#downloading-void) | [void-depth](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_VOID/my/structMDC_model/depth_model-best.pth) | [void-pose](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_VOID/my/structMDC_model/depth_model-best.pth) |
-|  NYUv2  | [pre-processed](https://github.com/fangchangma/sparse-to-dense) |     [nyu-download](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/NYUv2/nyu_v2_line.tar.xz) | - | [nyu-depth](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_NYUv2/my/structMDC_model/depth_model-best.pth) | [nyu-pose](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_NYUv2/my/structMDC_model/pose_model-best.pth) |
-|   PLAD  | proposed! |     [plad-download](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/PLAD/PLAD_v2.tar.xz) | [plad-raw](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/PLAD/PLAD_raw.tar.xz) |  [plad-depth (paper ver.)](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_PLAD/my/0321_low_error/structMDC_model/depth_model-best.pth)<br>[plad-depth (improved ver.)](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_PLAD/my/0317_low_error_(IROS_retrained)/depth_model-best.pth) | [plad-pose (paper ver.)](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_PLAD/my/0321_low_error/structMDC_model/pose_model-best.pth)<br>[plad-pose (improved ver.)](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_PLAD/my/0317_low_error_(IROS_retrained)/pose_model-best.pth) |
+|   VOID  | [original](https://github.com/alexklwong/void-dataset) |     [void-download](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/VOID/void_parsed_line.tar.gz) | [void-raw](https://github.com/alexklwong/void-dataset#downloading-void) | [void-depth](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_VOID/my/structMDC_model/depth_model-best.pth) | [void-pose](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_VOID/my/structMDC_model/depth_model-best.pth) |
+|  NYUv2  | [pre-processed](https://github.com/fangchangma/sparse-to-dense) |     [nyu-download](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/NYUv2/nyu_v2_line.tar.gz) | - | [nyu-depth](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_NYUv2/my/structMDC_model/depth_model-best.pth) | [nyu-pose](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_NYUv2/my/structMDC_model/pose_model-best.pth) |
+|   PLAD  | proposed! |     [plad-download](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/PLAD/PLAD_v2.tar.gz) | [plad-raw](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/PLAD/PLAD_raw.tar.gz) |  [plad-depth (paper ver.)](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_PLAD/my/0321_low_error/structMDC_model/depth_model-best.pth)<br>[plad-depth (improved ver.)](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_PLAD/my/0317_low_error_(IROS_retrained)/depth_model-best.pth) | [plad-pose (paper ver.)](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_PLAD/my/0321_low_error/structMDC_model/pose_model-best.pth)<br>[plad-pose (improved ver.)](https://urserver.kaist.ac.kr/publicdata/PLAD_Struct-MDC/jinwoo_from_MIL1/evaluation_results/main_exp_PLAD/my/0317_low_error_(IROS_retrained)/pose_model-best.pth) |
 
 </div>
 
@@ -166,12 +166,15 @@ Using our pre-trained network, you can simply run our network and verify the per
 cd Struct-MDC/Struct-MDC_src/
 mv $(PATH_TO_PRETRAINED_WEIGHTS)  ./pretrained/{plad | nyu | void}/struct_MDC_model/
 
-# link dataset
-tar -xvzf {PLAD: PLAD_v2 | VOID: void_parsed_line | NYUV2: nyu_v2_line}.tar.xz
+# link raw dataset
+tar -xvzf {PLAD: PLAD_v2 | VOID: void_parsed_line | NYUV2: nyu_v2_line}.tar.gz
 ln -s $(PATH_TO_DATASET_FOLDER) ./data/
 
+# data preparation
+python3 setup/setup_dataset_{nyu | void | plad}.py
+
 # running
-bash bash/run_structMDC_{plad | nyu | void}_pretrain.sh
+bash bash/run_structMDC_{nyu | void | plad}_pretrain.sh
 ```
 
 - **Evaluation results**
