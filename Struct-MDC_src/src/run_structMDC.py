@@ -154,7 +154,7 @@ if __name__ == '__main__':
         outlier_removal_kernel_size=args.outlier_removal_kernel_size,
         outlier_removal_threshold=args.outlier_removal_threshold,
         # Mesh Depth Refinement settings
-        n_convolution_mesh_depth_refine_pool=args.n_convolution_mesh_depth_refine,
+        n_convolution_mesh_depth_refine=args.n_convolution_mesh_depth_refine,
         n_filter_mesh_depth_refine=args.n_filter_mesh_depth_refine,
         # Depth network settings
         n_filters_encoder_image=args.n_filters_encoder_image,

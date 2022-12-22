@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export CUDA_VISIBLE_DEVICES=0
-export CUDA_LAUNCH_BLOCKING=0
+export CUDA_VISIBLE_DEVICES=1
+export CUDA_LAUNCH_BLOCKING=1
 
 python src/train_structMDC.py \
 --train_image_path training/plad/plad_train_image_150.txt \

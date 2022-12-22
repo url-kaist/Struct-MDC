@@ -33,6 +33,12 @@ objs = ["ground_truth",
 
 
 test_seqs = [
+'corridor_3',
+'building_wall_3',
+'room_5_2',
+'rest_4_1'
+]
+unused_seqs = [
 'test_1',
 'test_2',
 'test_3',
@@ -51,8 +57,6 @@ def gen_metadata(args):
     print('[Training set]')
     for obj in objs:
         dest_obj = obj
-        if obj == 'mesh_depth': 
-            dest_obj = 'sparse_depth'
         dest_fname = path+mode+'_'+dest_obj+".txt"
 
         print('writing [%s]' %(dest_fname))
@@ -61,7 +65,7 @@ def gen_metadata(args):
         for _, sequences, _ in os.walk(path+"data/"):
             for seq_name in sequences:
 
-                if seq_name in test_seqs:
+                if seq_name in test_seqs or seq_name in unused_seqs:
                     continue
                 
                 if obj == "intrinsics":
@@ -88,8 +92,6 @@ def gen_metadata(args):
     print('\n[Test set]')
     for obj in objs:
         dest_obj = obj
-        if obj == 'mesh_depth': 
-            dest_obj = 'sparse_depth'
         dest_fname = path+mode+'_'+dest_obj+".txt"
 
         print('writing [%s]' %(dest_fname))
@@ -98,7 +100,7 @@ def gen_metadata(args):
         for _, sequences, _ in os.walk(path+"data/"):
             for seq_name in sequences:
 
-                if seq_name not in test_seqs:
+                if seq_name not in test_seqs or seq_name in unused_seqs:
                     continue
                 
                 if obj == "intrinsics":

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=1
+export CUDA_LAUNCH_BLOCKING=1
 
 python src/run_structMDC.py \
 --cropped_margin 0 \

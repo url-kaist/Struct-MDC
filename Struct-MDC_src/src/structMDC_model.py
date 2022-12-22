@@ -419,8 +419,13 @@ class StructMDCModel(object):
 
         checkpoint = torch.load(checkpoint_path, map_location=self.device)
 
-        # Restore sparse to dense pool, encoder and decoder weights
-        self.mesh_depth_refine.load_state_dict(checkpoint['mesh_depth_refine_state_dict'])
+        # Restore Mesh Depth Refinement module, encoder and decoder weights
+        if 'mesh_depth_refine_state_dict' in checkpoint: # latest version
+            self.mesh_depth_refine.load_state_dict(checkpoint['mesh_depth_refine_state_dict'])
+        else: # previous version
+            assert ('refine_mesh_depth_state_dict' in checkpoint)
+            self.mesh_depth_refine.load_state_dict(checkpoint['refine_mesh_depth_state_dict'])
+
         self.encoder.load_state_dict(checkpoint['encoder_state_dict'])
         self.decoder.load_state_dict(checkpoint['decoder_state_dict'])
 

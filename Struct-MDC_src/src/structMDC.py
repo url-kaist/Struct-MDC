@@ -1050,7 +1050,7 @@ def run(image_path,
 
         # Convert to numpy
         output_depth = np.squeeze(output_depth.detach().cpu().numpy())
-        input_depth  = np.squeeze(input_depth.detach().cpu().numpy())
+        input_depth  = np.squeeze(sparse_depth.detach().cpu().numpy())
         input_depth  = np.mean(input_depth, axis=0)
 
         # Save to output
