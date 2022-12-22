@@ -23,6 +23,8 @@
   - (04/21) Dataset has been uploaded.
   - (04/21) Visusal-SLAM module (modified [UV-SLAM](https://github.com/url-kaist/UV-SLAM)) has been uploaded.
   - (11/01) data generation tools has been uploaded.
+  - (12/14) Visusal-SLAM module has been modified.
+  - (12/22) Struct-MDC PyTorch code has been uploaded.
 ***
 
 <br><br>
@@ -129,9 +131,11 @@
 
 - **Pre-trained weights**
   - We provide our pre-trained network, which is same as the one used in the paper.
+  - Please download the weigths from the below table and put into the 'Struct-MDC_src/pretrained'.
   - There are two files for each dataset: pre-trained weights for 
     - **Depth network:** used at training/evaluation time.
     - **Pose network:** used only at training time. (for supervision)
+  - 
 
 - **PLAD**
   - This is our proposed dataset, which has `point & line feature depth` from [UV-SLAM](https://github.com/url-kaist/UV-SLAM).
