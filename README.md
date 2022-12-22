@@ -140,7 +140,7 @@
 - **PLAD**
   - This is our proposed dataset, which has `point & line feature depth` from [UV-SLAM](https://github.com/url-kaist/UV-SLAM).
   - Each sequence was acquired in various indoor / outdoor man-made environment. 
-  - We also distribute the improved weights with original weights used for the paper. For each evaluation result, please refer [results]().
+  - The PLAD dataset has been slightly modified from the paper's version. We are trying to optimize each sequence and reproduce the results in this dataset. Of course, this dataset is always available, but it will be continuously updated with [version information](https://github.com/url-kaist/Struct-MDC#code--dataset-verion-info). So please keep track of our updated instructions.
 
 
 For more details on each dataset we used, please refer our [paper](https)
@@ -189,6 +189,7 @@ bash bash/run_structMDC_{nyu | void | plad}_pretrain.sh
 |              | **MAE**  | **RMSE** | **< 1.05** | **< 1.10** | **< 1.25^3** |
 |:------------:|----------|----------|------------|:----------:|:------------:|
 |   **paper**  | 1170.303 | 1481.583 | 4.567      |    8.899   |    67.071    |
+|   **modified**  | - | - | -      |    -   |    -    |
 
 </div>                                                             
                                                              
