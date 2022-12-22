@@ -49,16 +49,10 @@ sys.path.insert(0, 'src')
 import data_utils
 
 
-dataset_name = 'PLAD_v4'
+dataset_name = 'PLAD_v2'
 unused_img = 0
 
 USE_MESH = True # turn off if only line is used
-
-test_seqs = ['data/PLAD_v2/data/test_1', 
-             'data/PLAD_v2/data/test_2', 
-             'data/PLAD_v2/data/test_3', 
-             'data/PLAD_v2/data/test_4']
-
 
 PLAD_ROOT_DIRPATH       = os.path.join('data', dataset_name)
 PLAD_OUTPUT_DIRPATH     = os.path.join('data', 'plad_structMDC')
