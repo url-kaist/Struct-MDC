@@ -39,8 +39,7 @@ python3 data_generation/remove_bad_feature.py \
 # [filter] inproper mesh
 python3 data_generation/remove_bad_uv.py \
         --root_path     $(YOUR_DATA_ROOT_PATH) \
-        --dataset_name  $(YOUR_DATASET_NAME) \
-        --min_feat      $(MINIMUM_THRESHOLD)
+        --dataset_name  $(YOUR_DATASET_NAME)
 
 # [filter] cut-off user defined interval (VIO initialization interval; [details]()) 
 # after modifying lines 36-37 at remove_bad_gt.py (sequence name & frame index),
