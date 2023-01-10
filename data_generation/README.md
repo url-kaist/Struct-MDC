@@ -10,7 +10,7 @@ python3 data_generation/make_dirs.py \
         --root_path     $(YOUR_DATA_ROOT_PATH) \
         --dataset_name  $(YOUR_DATASET_NAME) \
         --sequence_list $(PATH_TO_SEQUENCE_LIST.TXT) \
-        --dataset_name  $(PATH_TO_INTRINSICS.TXT) \
+        --intrinsics  $(PATH_TO_INTRINSICS.TXT) \
 ```
 
 
