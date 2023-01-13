@@ -5,7 +5,7 @@
   
   [![video](https://img.shields.io/badge/YouTube-B31B1B.svg)]()
   
-  [![journal](https://img.shields.io/badge/RA_L-9672726-4b44ce.svg)](https://ieeexplore.ieee.org/document/9767763?source=authoralert)
+  [![journal](https://img.shields.io/badge/RA_L-9767763-4b44ce.svg)](https://ieeexplore.ieee.org/document/9767763?source=authoralert)
   [![arxiv](https://img.shields.io/badge/arXiv-2204.13877-B31B1B.svg)](https://arxiv.org/abs/2204.13877)
 
 </div>
