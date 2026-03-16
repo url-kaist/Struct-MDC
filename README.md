@@ -78,11 +78,11 @@
   - [Eigen-3.3.9](https://github.com/zinuok/VINS-Fusion#-eigen-1)
   - [CDT library](https://github.com/artem-ogre/CDT)
     ```
-    git clone https://github.com/artem-ogre/CDT.git
+    git clone --recursive https://github.com/artem-ogre/CDT.git
     cd CDT
     mkdir build && cd build
     cmake -DCDT_USE_AS_COMPILED_LIBRARY=ON -DCDT_USE_BOOST=ON ..
-    cmake --build . && cmake --install .
+    cmake --build . # && cmake --install .
     sudo make install
     ```
 - **Depth completion module**
